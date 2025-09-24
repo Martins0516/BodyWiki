@@ -180,7 +180,7 @@ export default function Header() {
               type='button'
               onClick={() => setMobileMenuOpen(false)}
               className='-m-2.5 rounded-md p-2.5 text-gray-700'
-            >
+            > 
               <span className='sr-only'>Close menu</span>
               <XMarkIcon aria-hidden='true' className='size-6' />
             </button>
