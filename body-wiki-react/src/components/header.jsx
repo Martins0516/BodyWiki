@@ -26,6 +26,7 @@ import {
   PhoneIcon,
   PlayCircleIcon,
 } from '@heroicons/react/20/solid';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 const products = [
   {
@@ -82,7 +83,7 @@ export default function Header() {
             <img
               src='/favicon.png'
               alt='BodyWiki logo'
-               className='h-6 w-auto'
+              className='h-6 w-auto'
             />
             <p className='font-sans text-lg font-bold text-green-400'>
               BodyWiki{' '}
@@ -149,8 +150,12 @@ export default function Header() {
           </a>
         // </PopoverGroup> */}
 
-        <div className='hidden lg:flex lg:flex-1 lg:justify-end'>
-          <a href='#' className='text-sm/6 font-semibold text-green-400'>
+        <div className='hidden lg:flex lg:flex-1 lg:justify-end items-center gap-4'>
+          <Avatar>
+            <AvatarImage src='https://github.com/shadcn.png' alt='@shadcn' />
+            <AvatarFallback>CN</AvatarFallback>
+          </Avatar>
+          <a href='/login' className='text-sm/6 font-semibold text-green-400'>
             Log in <span aria-hidden='true'></span>
           </a>
         </div>
